@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 
 public class EnemySpawner : NetworkBehaviour
 {
-
+    [SyncVar]
     public GameObject enemyPrefab;
     //public int numberOfEnemies;
 

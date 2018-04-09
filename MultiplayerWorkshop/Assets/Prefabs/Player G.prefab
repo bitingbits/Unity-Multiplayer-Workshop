@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114782923828477436}
   m_Layer: 0
   m_Name: Player G
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,6 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8e22b70e9bcc04cb60f37ff993c67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  bulletSpawn: {fileID: 0}
 --- !u!136 &136627470173868882
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -37,13 +37,13 @@ public class PlayerController : NetworkBehaviour
             bulletSpawn.rotation);
 
         // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.up * 6;
 
         // Spawn the bullet on the Clients
         NetworkServer.Spawn(bullet);
 
-        // Destroy the bullet after 2 seconds
-        Destroy(bullet, 2.0f);
+        // Destroy the bullet after 5 seconds
+        Destroy(bullet, 5.0f);
     }
 
     public override void OnStartLocalPlayer()

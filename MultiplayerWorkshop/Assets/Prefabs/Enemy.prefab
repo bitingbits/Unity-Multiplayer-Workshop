@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 135491517801873590}
   - component: {fileID: 23305956096759412}
   - component: {fileID: 54398657258168302}
+  - component: {fileID: 114009156365554708}
+  - component: {fileID: 114187064523040384}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -391,6 +393,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114009156365554708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904216554124306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ea5f034e6011441ae5af89f98a27e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnDeath: 1
+  currentHealth: 1000
+  healthBar: {fileID: 0}
+--- !u!114 &114187064523040384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904216554124306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 154
+    i1: 245
+    i2: 39
+    i3: 255
+    i4: 30
+    i5: 191
+    i6: 161
+    i7: 180
+    i8: 217
+    i9: 181
+    i10: 188
+    i11: 157
+    i12: 104
+    i13: 219
+    i14: 87
+    i15: 33
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!135 &135056475747211196
 SphereCollider:
   m_ObjectHideFlags: 1

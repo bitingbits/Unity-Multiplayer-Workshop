@@ -18,18 +18,22 @@ public class MonsterScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        //turn to closest killer
-        var lookPos = GetClosestPlayer(getPlayers(), this.transform).position - transform.position;
-        Debug.Log("Look Pos: " + lookPos);
-        lookPos.y = 0;
-        transform.LookAt(lookPos);
 
-        //move forward
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        //roll forward
-        /* RB.AddForce(new Vector3(5,0,0) * speed);
-         this.position += myTransform.forward * moveSpeed * Time.deltaTime;
-         */
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+        {
+            //turn to closest killer
+            //var lookPos = GetClosestPlayer(getPlayers(), this.transform).position - transform.position;
+            var lookPos = GetClosestPlayer(getPlayers(), this.transform).position;
+            lookPos.y = 0;
+            transform.LookAt(lookPos);
+
+            //move forward
+            transform.Translate(Vector3.forward *speed * Time.deltaTime);
+            //roll forward
+            /* RB.AddForce(new Vector3(5,0,0) * speed);
+             this.position += myTransform.forward * moveSpeed * Time.deltaTime;
+             */
+        }
     }
 
     List<Transform> getPlayers()
@@ -59,11 +63,8 @@ public class MonsterScript : MonoBehaviour
             }
         }
         print(bestTarget);
-        if(bestTarget != null)
-        {
-            return bestTarget;
-        }
-        return null;
+
+        return bestTarget;
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -20,11 +20,12 @@ public class MonsterScript : MonoBehaviour
 	void Update () {
         //turn to closest killer
         var lookPos = GetClosestPlayer(getPlayers(), this.transform).position - transform.position;
+        Debug.Log("Look Pos: " + lookPos);
         lookPos.y = 0;
         transform.LookAt(lookPos);
 
         //move forward
-        transform.Translate(Vector3.forward *speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
         //roll forward
         /* RB.AddForce(new Vector3(5,0,0) * speed);
          this.position += myTransform.forward * moveSpeed * Time.deltaTime;
@@ -58,6 +59,18 @@ public class MonsterScript : MonoBehaviour
             }
         }
         print(bestTarget);
-        return bestTarget;
+        if(bestTarget != null)
+        {
+            return bestTarget;
+        }
+        return null;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Health>().TakeDamage(10);
+        }
     }
 }

@@ -14,7 +14,7 @@ public class Health : NetworkBehaviour
 
     public RectTransform healthBar;
 
-    private NetworkStartPosition[] spawnPoints;
+    public NetworkStartPosition[] spawnPoints;
 
     public void TakeDamage(int amount)
     {

@@ -173,7 +173,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1630428979247866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.328096, y: 0.5, z: 8.289527}
+  m_LocalPosition: {x: -3.4968522, y: 0.5, z: -5.9423356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4889785236543122}
@@ -272,7 +272,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -376,6 +376,9 @@ MonoBehaviour:
   destroyOnDeath: 0
   currentHealth: 100
   healthBar: {fileID: 224906032261409370}
+  spawnPoints:
+  - {fileID: 114917219757586048, guid: e30408ed4f8442344a5d888b760f3b03, type: 2}
+  - {fileID: 114249513133896508, guid: 3b1694b8c76cb0947883d05ed86153c4, type: 2}
 --- !u!114 &114278215435572408
 MonoBehaviour:
   m_ObjectHideFlags: 1
